@@ -1,0 +1,15 @@
+{
+  "name": "phaser-game-examples",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve"
+  },
+  "repository": "https://github.com/fetaoily/phaser-game-examples.git",
+  "author": "fangertao <fetaoily@foxmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "phaser-ce": "2.10.0",
+    "serve": "6.4.9"
+  }
+}
