@@ -1,4 +1,5 @@
 let game;
+let ballSprite;
 
 let gameOptions = {
   scorePanelHeight: 0.08,
@@ -69,6 +70,8 @@ PlayGame.prototype = {
     this.aiming = false;
     //
     this.shooting = false;
+    //
+    ballSprite = this.ball;
   },
   aimBall (e) {
     if (!this.shooting) {
@@ -104,8 +107,9 @@ PlayGame.prototype = {
         this.ball.body.velocity.set(0);
         this.shooting = false;
       }, null, this);
-      this.ball.rotation += 0.1;
     }
+    this.ball.rotation += 0.5;
+    // this.ball.body.gravity.y = 1;
   },
   render () {
     game.debug.spriteInfo(this.ball, 32, 32);
