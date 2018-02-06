@@ -17,12 +17,12 @@ window.onload = function () {
 let PlayGame = function () {
 };
 PlayGame.prototype = {
-  preload: function () {
+  preload () {
     game.load.image('ball', '/assets/sprites/ball.png');
     game.load.image('panel', '/assets/sprites/panel.png');
     game.load.image('trajectory', '/assets/sprites/trajectory.png');
   },
-  create: function () {
+  create () {
     //
     game.stage.backgroundColor = 0x202020;
     //
@@ -69,12 +69,12 @@ PlayGame.prototype = {
     //
     this.shooting = false;
   },
-  aimBall: function (e) {
+  aimBall (e) {
     if (!this.shooting) {
       this.aiming = true;
     }
   },
-  adjustBall: function (e) {
+  adjustBall (e) {
     if (this.aiming) {
       let distX = e.position.x - e.positionDown.x;
       let distY = e.position.y - e.positionDown.y;
@@ -88,7 +88,7 @@ PlayGame.prototype = {
       }
     }
   },
-  shootBall: function () {
+  shootBall () {
     if (this.trajectory.visible) {
       let angleOfFire = Phaser.Math.degToRad(this.trajectory.angle - 90);
       this.ball.body.velocity.set(gameOptions.ballSpeed * Math.cos(angleOfFire), gameOptions.ballSpeed * Math.sin(angleOfFire));
@@ -97,7 +97,7 @@ PlayGame.prototype = {
     this.aiming = false;
     this.trajectory.visible = false;
   },
-  update: function () {
+  update () {
     if (this.shooting) {
       let _self = this;
       game.physics.arcade.collide(this.ball, this.launchPanel, function () {
@@ -106,6 +106,8 @@ PlayGame.prototype = {
       }, null, this);
     }
   },
-  render: function () {
+  render () {
+    game.debug.spriteInfo(this.ball, 32, 32);
+    game.debug.spriteBounds(this.ball);
   }
 };
