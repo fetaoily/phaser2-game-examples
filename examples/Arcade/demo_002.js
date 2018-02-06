@@ -18,7 +18,8 @@ let PlayGame = function () {
 };
 PlayGame.prototype = {
   preload () {
-    game.load.image('ball', '/assets/sprites/ball.png');
+    // game.load.image('ball', '/assets/sprites/ball.png');
+    game.load.image('ball', '/assets/sprites/ball_01.png');
     game.load.image('panel', '/assets/sprites/panel.png');
     game.load.image('trajectory', '/assets/sprites/trajectory.png');
   },
@@ -99,11 +100,11 @@ PlayGame.prototype = {
   },
   update () {
     if (this.shooting) {
-      let _self = this;
       game.physics.arcade.collide(this.ball, this.launchPanel, function () {
-        _self.ball.body.velocity.set(0);
-        _self.shooting = false;
+        this.ball.body.velocity.set(0);
+        this.shooting = false;
       }, null, this);
+      this.ball.rotation += 0.1;
     }
   },
   render () {
