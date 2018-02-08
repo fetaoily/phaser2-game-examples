@@ -28,10 +28,11 @@ PlayGame.prototype = {
     target.inputEnabled = true;
     target.input.enableDrag(true);
 
-    game.physics.arcade.collideWorldBounds = true;
-
     game.physics.arcade.enable(target);
-    // target.body.gravity.y = 1000;
+    target.body.gravity.y = 100;
+    target.body.collideWorldBounds = true;
+    target.body.bounce.set(0.5);
+    target.body.setCircle();
   },
   update () {
     // arrow.rotation = game.physics.arcade.angleBetween(arrow, target);
