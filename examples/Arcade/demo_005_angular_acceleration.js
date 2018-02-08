@@ -13,6 +13,8 @@ let PlayGame = function () {
 PlayGame.prototype = {
   preload () {
     game.load.image('arrow', '/assets/sprites/arrow.png');
+
+    game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
   },
   create () {
     game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -24,7 +26,7 @@ PlayGame.prototype = {
     game.physics.arcade.enable(this.sprite);
     // this.sprite.body.gravity.x = 100;
 
-    // this.sprite.body.maxAngular = 500;
+    this.sprite.body.maxAngular = 500;
     this.sprite.body.angularDrag = 50;
   },
   update () {
@@ -34,9 +36,10 @@ PlayGame.prototype = {
     } else if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) {
       this.sprite.body.angularAcceleration += 200;
     }
-    console.info(this.sprite.body.angularAcceleration);
+    // console.info(this.sprite.body.angularAcceleration);
   },
   render () {
     game.debug.spriteInfo(this.sprite, 32, 32);
+    game.debug.text(`AngularAcceleration: ${this.sprite.body.angularAcceleration}`, 32, 140)
   }
 };
