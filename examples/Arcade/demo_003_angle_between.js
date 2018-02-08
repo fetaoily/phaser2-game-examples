@@ -28,15 +28,20 @@ PlayGame.prototype = {
     target.inputEnabled = true;
     target.input.enableDrag(true);
 
+    game.physics.arcade.collideWorldBounds = true;
+
     game.physics.arcade.enable(target);
-    // target.body.gravity.y = 1;
+    // target.body.gravity.y = 1000;
   },
   update () {
-    arrow.rotation = game.physics.arcade.angleBetween(arrow, target);
+    // arrow.rotation = game.physics.arcade.angleBetween(arrow, target);
+    arrow.rotation = game.physics.arcade.angleToXY(arrow, target.x, target.y);
+    // arrow.rotation = game.physics.arcade.angleToPointer(arrow);
   },
   render () {
     game.debug.text('Drag the ball', 32, 32);
     game.debug.spriteInfo(arrow, 32, 100);
+    game.debug.spriteInfo(target, 32, 200);
     game.debug.spriteBounds(arrow);
     game.debug.spriteBounds(target);
   }
