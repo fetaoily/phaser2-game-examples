@@ -1,5 +1,6 @@
 'use strict';
 let game;
+let sprite;
 window.onload = () => {
   game = new Phaser.Game(800, 600, Phaser.AUTO);
   game.state.add('PlayGame', PlayGame);
@@ -16,7 +17,7 @@ PlayGame.prototype = {
     game.scale.pageAlignVertically = true;
     //
     game.load.image('phaser', '/assets/sprites/phaser-dude.png');
-    game.load.spritesheet('veggies', '/assets/sprites/fruitnveg32wh37.png');
+    game.load.spritesheet('veggies', '/assets/sprites/fruitnveg32wh37.png', 32, 32);
   },
   create () {
     game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -32,8 +33,9 @@ PlayGame.prototype = {
       }
     }
 
-    this.sprite = game.add.sprite(32, 200, 'phaser');
+    sprite = this.sprite = game.add.sprite(32, 200, 'phaser');
     game.physics.arcade.enable(this.sprite);
+    this.sprite.body.collideWorldBounds = true;
 
     this.cursors = game.input.keyboard.createCursorKeys();
   },
