@@ -15,6 +15,7 @@ PlayGame.prototype = {
     game.scale.pageAlignHorizontally = true;
     game.scale.pageAlignVertically = true;
     //
+    game.load.image('space', '/assets/skies/deep-space.jpg');
     game.load.image('phaser', '/assets/sprites/phaser-dude.png');
     game.load.image('bullet', '/assets/misc/bullet0.png');
     game.load.spritesheet('veggies', '/assets/sprites/fruitnveg32wh37.png', 32, 32);
@@ -23,6 +24,9 @@ PlayGame.prototype = {
     game.stage.backgroundColor = '#2d2d2d';
 
     this.bulletTime = 0;
+
+    this.space = game.add.tileSprite(0, 0, 800, 600, 'space');
+    this.space.autoScroll(0, 10);
 
     this.veggies = game.add.group();
     this.veggies.enableBody = true;
