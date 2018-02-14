@@ -34,7 +34,6 @@ PlayGame.prototype = {
 
     for (let i = 0; i < 50; i++) {
       let c = this.veggies.create(game.world.randomX, Math.random() * 500, 'veggies', game.rnd.integerInRange(0, 36));
-      let d = this.veggies.create(game.world.randomX, Math.random() * 500, 'veggies', game.rnd.integerInRange(0, 36));
       c.name = 'veg' + i;
       c.body.immovable = true;
     }
