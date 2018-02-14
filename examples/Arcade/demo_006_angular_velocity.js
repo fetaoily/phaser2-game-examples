@@ -57,6 +57,7 @@ PlayGame.prototype = {
   },
   render () {
     game.debug.spriteInfo(this.sprite, 32, 32);
+    game.debug.body(this.sprite);
     game.debug.text('angularVelocity: ' + this.sprite.body.angularVelocity, 32, 200);
     game.debug.text('angularAcceleration: ' + this.sprite.body.angularAcceleration, 32, 232);
     game.debug.text('angularDrag: ' + this.sprite.body.angularDrag, 32, 264);
