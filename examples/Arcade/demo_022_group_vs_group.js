@@ -53,8 +53,12 @@ PlayGame.prototype = {
     }
 
     this.sprite = game.add.sprite(400, 550, 'phaser');
+
     game.physics.arcade.enable(this.sprite);
     this.sprite.body.collideWorldBounds = true;
+
+    this.sprite.inputEnabled = true;
+    this.sprite.input.enableDrag();
 
     this.cursors = game.input.keyboard.createCursorKeys();
 
