@@ -46,5 +46,6 @@ PlayGame.prototype = {
     }
   },
   render () {
+    game.debug.text('Distance to pointer:' + game.physics.arcade.distanceToPointer(this.ball), 32, 32);
   }
 };
