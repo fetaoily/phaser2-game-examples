@@ -67,6 +67,7 @@ PlayGame.prototype = {
     //
     if (this.cursors.up.isDown) {
       this.car.body.velocity.copyFrom(game.physics.arcade.velocityFromAngle(this.car.angle, 300));
+      // game.physics.arcade.velocityFromAngle(this.car.angle, 300, this.car.body.velocity);
     }
   },
   render () {
