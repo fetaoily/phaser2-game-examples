@@ -28,10 +28,11 @@ PlayGame.prototype = {
     this.sprite1.body.setSize(400, 50, -100, 20);
     this.sprite1.body.immovable = true;
 
-    this.sprite2 = game.add.sprite(700, 210, 'mushroom');
+    this.sprite2 = game.add.sprite(700, 269, 'mushroom');
     this.sprite2.name = 'mushroom';
     game.physics.arcade.enable(this.sprite2);
     this.sprite2.body.velocity.x = -100;
+    this.sprite2.body.setCircle(this.sprite2.width/2);
   },
   update () {
     game.physics.arcade.collide(this.sprite1, this.sprite2, this.collisionHandler, null, this);
