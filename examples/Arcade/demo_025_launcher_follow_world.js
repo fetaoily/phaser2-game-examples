@@ -5,6 +5,8 @@ let player;
 let myTween;
 let launched;
 let catchFlag = false;
+let graphics1;
+let graphics2;
 
 window.onload = () => {
   game = new Phaser.Game(800, 600, Phaser.AUTO);
@@ -27,27 +29,33 @@ PlayGame.prototype = {
     game.load.image('arrow', '/assets/sprites/longarrow2.png');
   },
   create () {
+    //
     game.world.setBounds(0, 0, 5000, 600);
     game.add.tileSprite(0, 0, 5000, 600, 'background');
     //
-    this.graphics = game.add.graphics(0, 0);
-    this.graphics.beginFill(0x049e0c);
-    this.graphics.drawRect(395, 400, 10, 250);
+    this.graphics1 = game.add.graphics(0, 0);
+    this.graphics1.beginFill(0x049e0c);
+    this.graphics1.drawRect(395, 400, 10, 250);
+    //
+    this.graphics2 = game.add.graphics(0, 0);
+    this.graphics2.beginFill(0xff0000);
+    this.graphics2.drawCircle(395, 400, 100);
+    this.graphics2.alpha = 0.3;
     //
     analog = this.analog = game.add.sprite(400, 400, 'analog');
     this.analog.width = 8;
-    this.analog.rotation = 220;
-    this.analog.alpha = 0;
+    this.analog.rotation = 1;
+    this.analog.alpha = 0.5;
     this.analog.anchor.setTo(0.5, 0);
     //
     arrow = this.arrow = game.add.sprite(400, 400, 'arrow');
-    this.arrow.anchor.setTo(0.5, 0.5);
-    this.arrow.alpha = 0;
+    this.arrow.anchor.setTo(0.1, 0.5);
+    this.arrow.alpha = 0.5;
     //
     player = this.player = game.add.sprite(150, 320, 'player');
     this.player.anchor.setTo(0.5, 0.5);
     //
-    game.physics.arcade.enable(this.player);
+    game.physics.arcade.enable([this.player]);
     //
     this.player.body.collideWorldBounds = true;
     this.player.body.bounce.set(0.9);
@@ -102,6 +110,11 @@ PlayGame.prototype = {
     game.debug.cameraInfo(game.camera, 32, 32 * 2);
     game.debug.spriteCoords(this.player, 32, 32 * 7);
     game.debug.text('Launch Velocity: ' + parseInt(this.launchVelocity), 550, 32, 'rgb(0,255,0)');
+    game.debug.body(player);
+    game.debug.body(analog);
+    game.debug.body(arrow);
+    game.debug.text('analog.rotation: ' + analog.rotation, 32, 32 * 10);
+    game.debug.text('distance: ' + this.distance, 32, 32 * 11);
   },
   reappear () {
     launched = false;
@@ -122,8 +135,8 @@ PlayGame.prototype = {
       launched = true;
       game.camera.follow(player, Phaser.Camera.FOLLOW_TOPDOWN);
 
-      arrow.alpha = 0;
-      analog.alpha = 0;
+      // arrow.alpha = 0;
+      // analog.alpha = 0;
       let XVector = (arrow.x - player.x) * 3;
       let YVector = (arrow.y - player.y) * 3;
 
