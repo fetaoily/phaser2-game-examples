@@ -95,6 +95,7 @@ PlayGame.prototype = {
       this.analog.rotation = this.arrow.rotation - Math.PI / 2;
       this.launchVelocity = this.analog.height;
     }
+    this.analog.rotation = this.arrow.rotation - Math.PI / 2;
     this.tweening = this.myTween.isRunning;
     if (!this.tweening && launched && (this.player.x >= game.world.width - 20 || this.player.body.deltaX() === 0)) {
       this.player.body.velocity.setTo(0, 0);
@@ -114,7 +115,8 @@ PlayGame.prototype = {
     game.debug.body(analog);
     game.debug.body(arrow);
     game.debug.text('analog.rotation: ' + analog.rotation, 32, 32 * 10);
-    game.debug.text('distance: ' + this.distance, 32, 32 * 11);
+    game.debug.text('arrow.rotation: ' + arrow.rotation, 32, 32 * 11);
+    game.debug.text('distance: ' + this.distance, 32, 32 * 12);
   },
   reappear () {
     launched = false;
