@@ -42,11 +42,12 @@ PlayGame.prototype = {
   render () {
     game.debug.text('distance: ' + game.physics.arcade.distanceToPointer(this.ball), 32, 32);
     game.debug.spriteInfo(this.ball, 32, 32 * 2);
-    game.debug.text('Ball Velocity: ' + this.ball.body.velocity, 32, 32 * 5,'red');
+    game.debug.text('Ball Velocity: ' + this.ball.body.velocity, 32, 32 * 5, 'red');
   },
   moveBall () {
     // game.camera.follow();
     let distance = game.physics.arcade.distanceToPointer(this.ball);
-    game.physics.arcade.moveToPointer(this.ball, 200 + distance);
+    // game.physics.arcade.moveToPointer(this.ball, 200 + distance);
+    game.physics.arcade.moveToPointer(this.ball, distance, game.input.activePointer, 1000);
   }
 };
