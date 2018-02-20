@@ -42,11 +42,13 @@ PlayGame.prototype = {
     this.car.body.bounce.set(0.8);
     this.car.body.allowRotation = true;
     this.car.body.immovable = true;
+    this.car.body.setCircle(this.car.height * 2, -(this.car.width + this.car.width / 2), -(this.car.height + this.car.height / 2));
 
     this.cursors = game.input.keyboard.createCursorKeys();
   },
   update () {
     game.physics.arcade.collide(this.car, this.aliens);
+    game.physics.arcade.collide(this.aliens, this.aliens);
 
     this.car.body.velocity.x = 0;
     this.car.body.velocity.y = 0;
@@ -63,6 +65,8 @@ PlayGame.prototype = {
     }
   },
   render () {
+    game.debug.body(this.car);
+    game.debug.bodyInfo(this.car, 32, 32);
   }
 };
 
