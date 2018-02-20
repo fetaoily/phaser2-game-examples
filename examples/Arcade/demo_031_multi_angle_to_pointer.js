@@ -41,5 +41,14 @@ PlayGame.prototype = {
     this.sprite4.rotation = game.physics.arcade.angleToPointer(this.sprite4);
   },
   render () {
+    game.debug.text('sprite1 angle to pointer: ' + this.sprite1.rotation, 32, 32);
+    game.debug.text('sprite2 angle to pointer: ' + this.sprite2.rotation, 32, 32 * 2);
+    game.debug.text('sprite3 angle to pointer: ' + this.sprite3.rotation, 32, 32 * 3);
+    game.debug.text('sprite4 angle to pointer: ' + this.sprite4.rotation, 32, 32 * 4);
+    //
+    game.debug.text('sprite1:' + this.sprite1.rotation, this.sprite1.x, this.sprite1.y, 'red');
+    game.debug.text('sprite2:' + this.sprite2.rotation, this.sprite2.x, this.sprite2.y, 'green');
+    game.debug.text('sprite3:' + this.sprite3.rotation, this.sprite3.x, this.sprite3.y, 'blue');
+    game.debug.text('sprite4:' + this.sprite4.rotation, this.sprite4.x, this.sprite4.y, 'yellow');
   }
 };
