@@ -32,7 +32,7 @@ PlayGame.prototype = {
     game.physics.startSystem(Phaser.Physics.ARCADE);
     game.world.setBounds(0, 0, 3400, 1000);
     background = this.background = game.add.tileSprite(0, 0, 3400, 1000, 'background');
-    this.background.autoScroll(0, 100);
+    // this.background.autoScroll(0, 100);
     //
     analog = this.analog = game.add.sprite(200, 450, 'analog');
     analog.width = 8;
