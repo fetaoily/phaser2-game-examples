@@ -77,13 +77,13 @@ PlayGame.prototype = {
         facing = 'idle';
       }
     }
-    if (jumpButton.isDown && player.body.onFloor() && game.time.now > jumpTimer) {
+    if ((jumpButton.isDown || cursors.up.isDown) && player.body.onFloor() && game.time.now > jumpTimer) {
       player.body.velocity.y = -250;
       jumpTimer = game.time.now + 750;
     }
   },
   render () {
     game.debug.bodyInfo(player, 32, 32);
-    game.debug.body(player);
+    // game.debug.body(player);
   }
 };
