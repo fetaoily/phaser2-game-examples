@@ -30,6 +30,9 @@ PlayGame.prototype = {
 
     game.physics.arcade.enable(this.ball);
 
+    this.ball.body.collideWorldBounds = true;
+    this.ball.body.bounce.set(0.9);
+
     game.camera.follow(this.ball);
 
     game.input.onDown.add(this.moveBall, this);
@@ -38,9 +41,12 @@ PlayGame.prototype = {
   },
   render () {
     game.debug.text('distance: ' + game.physics.arcade.distanceToPointer(this.ball), 32, 32);
+    game.debug.spriteInfo(this.ball, 32, 32 * 2);
+    game.debug.text('Ball Velocity: ' + this.ball.body.velocity, 32, 32 * 5,'red');
   },
   moveBall () {
-    game.camera.follow();
-    game.physics.arcade.moveToPointer(this.ball, 100);
+    // game.camera.follow();
+    let distance = game.physics.arcade.distanceToPointer(this.ball);
+    game.physics.arcade.moveToPointer(this.ball, 200 + distance);
   }
 };
