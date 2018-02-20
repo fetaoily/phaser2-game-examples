@@ -46,6 +46,6 @@ PlayGame.prototype = {
     game.debug.body(this.sprite2);
   },
   collisionHandler () {
-      game.stage.backgroundColor = '#ff0000';
+      game.stage.backgroundColor = '#992d2d';
   }
 };
