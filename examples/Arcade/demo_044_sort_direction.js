@@ -30,6 +30,7 @@ PlayGame.prototype = {
     game.physics.arcade.sortDirection = Phaser.Physics.Arcade.RIGHT_LEFT;
 
     game.physics.arcade.enable(this.sprite);
+    this.sprite.body.setCircle(this.sprite.width / 2, 0, this.sprite.height / 2 / 2);
 
     this.group = game.add.physicsGroup(Phaser.Physics.ARCADE);
 
@@ -67,6 +68,8 @@ PlayGame.prototype = {
     }
   },
   render () {
+    game.debug.body(this.sprite);
+    game.debug.bodyInfo(this.sprite, 32, 32);
   },
   collisionHandler (player, veg) {
     if (veg.frame === 17) {
