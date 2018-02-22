@@ -23,7 +23,7 @@ PlayGame.prototype = {
     this.snakeSection = [];
     this.snakePath = [];
     this.numSnakeSections = 30;
-    this.snakeSpacer = 10;
+    this.snakeSpacer = 6;
   },
   create () {
     game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -40,6 +40,7 @@ PlayGame.prototype = {
     for (let i = 0; i < this.numSnakeSections; i++) {
       this.snakeSection[i] = game.add.sprite(400, 300, 'ball');
       this.snakeSection[i].anchor.setTo(0.5, 0.5);
+      this.snakeSection[i].name = 'part:' + i;
     }
 
     for (let i = 0; i <= this.numSnakeSections * this.snakeSpacer; i++) {
@@ -57,9 +58,11 @@ PlayGame.prototype = {
       part.setTo(this.snakeHead.x, this.snakeHead.y);
 
       this.snakePath.unshift(part);
-      for (let i = 1; i < this.numSnakeSections; i++) {
-        this.snakeSection[i].x = (this.snakePath[i * this.snakeSpacer]).x;
-        this.snakeSection[i].y = (this.snakePath[i * this.snakeSpacer]).y;
+      for (let i = 0; i < this.numSnakeSections; i++) {
+        let snakeSectionItem = this.snakeSection[i];
+        snakeSectionItem.x = (this.snakePath[i * this.snakeSpacer]).x;
+        snakeSectionItem.y = (this.snakePath[i * this.snakeSpacer]).y;
+        game.debug.text(snakeSectionItem.name, snakeSectionItem.x, snakeSectionItem.y);
       }
     }
     if (this.cursors.left.isDown) {
@@ -70,5 +73,9 @@ PlayGame.prototype = {
   },
   render () {
     game.debug.spriteInfo(this.snakeHead, 32, 32);
+    // for (let i = 0; i < this.numSnakeSections; i++) {
+    //   let snakeSectionItem = this.snakeSection[i];
+    //   game.debug.text(snakeSectionItem.name, snakeSectionItem.x, snakeSectionItem.y);
+    // }
   }
 };
