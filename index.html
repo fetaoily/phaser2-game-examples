@@ -1,82 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Phaser Game Examples</title>
-    <script src="/node_modules/phaser-ce/build/phaser.min.js"></script>
-    <script src="/assets/plugins/box2d-plugin-full.js"></script>
-    <!--<script src="/examples/Box2D/demo_001.js"></script>-->
-    <!--Arcade-->
-    <!--<script src="/examples/Arcade/demo_001_accelerate_to_pointer.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_002.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_003_angle_between.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_004_angle_to_pointer.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_005_angular_acceleration.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_006_angular_velocity.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_007_asteroids_movement.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_008_body_debug.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_009_body_enable.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_010_body_scale.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_011_bounce_accelerator.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_012_bounce_knock.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_013_bounce_with_gravity.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_014_bounce.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_015_bounding_box.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_016_custom_sprite_vs_group.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_017_direct_body_movement.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_018_distance_to_pointer.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_019_global_pause.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_020_gravity_and_drag.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_021_gravity.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_022_group_vs_group.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_023_group_vs_self.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_024_larger_bounding_box.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_025_launcher_follow_world.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_026_launcher_follow.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_027_launcher.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_028_mass_velocity_test.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_029_move_to_pointer.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_030_move_towards_object.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_031_multi_angle_to_pointer.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_032_multiball.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_033_nested_group.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_034_offset_bounding_box.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_035_one_way_collision.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_036_platformer_basics.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_037_platformer_tight.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_038_process_callback.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_039_quadtree_collision_infos.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_040_ship_trail.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_041_shoot_the_pointer.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_042_snake.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_043_sort_direction_vertical.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_044_sort_direction.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_045_sprite_vs_group.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_046_sprite_vs_sprite.js"></script>-->
-    <!--<script src="/examples/Arcade/demo_047_vertical_collision.js"></script>-->
-    <!--=============================================================================================================-->
-    <!--World-->
-    <!--=============================================================================================================-->
-    <!--<script src="/examples/World/world_001_fixed_to_camera.js"></script>-->
-    <!--<script src="/examples/World/world_002_move_around_world.js"></script>-->
-    <!--<script src="/examples/World/world_003_world_wrap.js"></script>-->
-    <!--=============================================================================================================-->
-    <!--Create-->
-    <!--=============================================================================================================-->
-    <!--<script src="/examples/Create/create_001_generate_sprite.js"></script>-->
-    <!--<script src="/examples/Create/create_002_gradient_gen.js"></script>-->
-    <!--<script src="/examples/Create/create_003_more_sprites.js"></script>-->
-    <!--<script src="/examples/Create/create_004_polyline.js"></script>-->
-    <script src="/examples/Create/create_005_rat_attack.js"></script>
+  <meta charset="UTF-8">
+  <title>Phaser Game Examples</title>
+  <script src="/node_modules/phaser-ce/build/phaser.min.js"></script>
+  <script src="/assets/plugins/box2d-plugin-full.js"></script>
+  <!--<script src="/examples/Box2D/demo_001.js"></script>-->
+  <!--Arcade-->
+  <!--<script src="/examples/Arcade/demo_001_accelerate_to_pointer.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_002.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_003_angle_between.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_004_angle_to_pointer.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_005_angular_acceleration.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_006_angular_velocity.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_007_asteroids_movement.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_008_body_debug.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_009_body_enable.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_010_body_scale.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_011_bounce_accelerator.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_012_bounce_knock.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_013_bounce_with_gravity.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_014_bounce.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_015_bounding_box.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_016_custom_sprite_vs_group.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_017_direct_body_movement.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_018_distance_to_pointer.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_019_global_pause.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_020_gravity_and_drag.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_021_gravity.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_022_group_vs_group.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_023_group_vs_self.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_024_larger_bounding_box.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_025_launcher_follow_world.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_026_launcher_follow.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_027_launcher.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_028_mass_velocity_test.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_029_move_to_pointer.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_030_move_towards_object.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_031_multi_angle_to_pointer.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_032_multiball.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_033_nested_group.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_034_offset_bounding_box.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_035_one_way_collision.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_036_platformer_basics.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_037_platformer_tight.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_038_process_callback.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_039_quadtree_collision_infos.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_040_ship_trail.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_041_shoot_the_pointer.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_042_snake.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_043_sort_direction_vertical.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_044_sort_direction.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_045_sprite_vs_group.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_046_sprite_vs_sprite.js"></script>-->
+  <!--<script src="/examples/Arcade/demo_047_vertical_collision.js"></script>-->
+  <!--=============================================================================================================-->
+  <!--World-->
+  <!--=============================================================================================================-->
+  <!--<script src="/examples/World/world_001_fixed_to_camera.js"></script>-->
+  <!--<script src="/examples/World/world_002_move_around_world.js"></script>-->
+  <!--<script src="/examples/World/world_003_world_wrap.js"></script>-->
+  <!--=============================================================================================================-->
+  <!--Create-->
+  <!--=============================================================================================================-->
+  <!--<script src="/examples/Create/create_001_generate_sprite.js"></script>-->
+  <!--<script src="/examples/Create/create_002_gradient_gen.js"></script>-->
+  <!--<script src="/examples/Create/create_003_more_sprites.js"></script>-->
+  <!--<script src="/examples/Create/create_004_polyline.js"></script>-->
+  <!--<script src="/examples/Create/create_005_rat_attack.js"></script>-->
+  <script src="/examples/TileSprite/tile_sprite_001_animated_tiling_sprite.js"></script>
 
-    <!--P2-->
-    <!--<script src="/examples/P2/main_001.js"></script>-->
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-    </style>
+
+  <!--P2-->
+  <!--<script src="/examples/P2/main_001.js"></script>-->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
 </head>
 <body>
 </body>
