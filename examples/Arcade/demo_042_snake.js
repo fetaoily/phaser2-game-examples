@@ -17,6 +17,7 @@ PlayGame.prototype = {
     game.scale.pageAlignVertically = true;
     //
     game.load.image('ball', '/assets/sprites/shinyball.png');
+    game.load.image('snakehead', '/assets/sprites/snakehead.png');
     //
     this.snakeHead = null;
     this.snakeSection = [];
@@ -30,8 +31,9 @@ PlayGame.prototype = {
     game.world.setBounds(0, 0, 800, 600);
     this.cursors = game.input.keyboard.createCursorKeys();
 
-    this.snakeHead = game.add.sprite(400, 300, 'ball');
+    this.snakeHead = game.add.sprite(400, 300, 'snakehead');
     this.snakeHead.anchor.setTo(0.5, 0.5);
+    this.snakeHead.scale.set(2);
 
     game.physics.enable(this.snakeHead, Phaser.Physics.ARCADE);
 
