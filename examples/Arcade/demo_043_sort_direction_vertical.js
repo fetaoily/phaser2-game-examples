@@ -79,6 +79,5 @@ PlayGame.prototype = {
     if (veg.frame === 17) {
       veg.kill();
     }
-
   }
 };
