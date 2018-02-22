@@ -37,10 +37,19 @@ PlayGame.prototype = {
 
     game.physics.enable(this.sprite, Phaser.Physics.ARCADE);
     this.sprite.body.allowRotation = false;
+
+    this.cursors = game.input.keyboard.createCursorKeys();
+    this.buttonFire = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
   },
   update () {
     this.sprite.rotation = game.physics.arcade.angleToPointer(this.sprite);
     if (game.input.activePointer.isDown) {
+      this.fire();
+    }
+    if (this.cursors.up.isDown) {
+      this.fire();
+    }
+    if (this.buttonFire.isDown) {
       this.fire();
     }
   },
