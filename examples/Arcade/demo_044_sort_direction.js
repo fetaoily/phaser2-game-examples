@@ -28,6 +28,7 @@ PlayGame.prototype = {
     this.sprite = game.add.sprite(1960, 200, 'phaser');
 
     game.physics.arcade.sortDirection = Phaser.Physics.Arcade.RIGHT_LEFT;
+    // game.physics.arcade.sortDirection = Phaser.Physics.Arcade.BOTTOM_TOP;
 
     game.physics.arcade.enable(this.sprite);
     this.sprite.body.setCircle(this.sprite.width / 2, 0, this.sprite.height / 2 / 2);
