@@ -11,6 +11,8 @@ let PlayGame = function () {
 
 PlayGame.prototype = {
   preload () {
+    this.count = 0;
+    this.lastScaleTime = 0;
     //
     game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
     game.scale.pageAlignHorizontally = true;
@@ -23,6 +25,7 @@ PlayGame.prototype = {
     game.add.image(0, 0, 'water');
     //
     this.sprite = game.add.sprite(0, 0, 'bubble');
+    this.sprite.anchor.setTo(0.5, 0.5);
     //
     this.emitter = game.add.emitter(game.world.centerX, 400, 400);
     this.emitter.makeParticles('bubble');
@@ -40,7 +43,6 @@ PlayGame.prototype = {
     this.emitter.emitY = game.world.randomY;
     //
     this.sprite.reset(this.emitter.emitX, this.emitter.emitY);
-    console.info(this.emitter.emitX + ':' + this.emitter.emitY);
     //
     game.add.tween(this.emitter).to({
       emitX: 800,
@@ -48,7 +50,15 @@ PlayGame.prototype = {
     }, 2000, Phaser.Easing.Linear.None, true, 0, Number.MAX_VALUE, true);
   },
   update () {
+    //
     this.emitter.customSort(this.scaleSort, this);
+    //
+    if (game.time.now > this.lastScaleTime) {
+      this.count += 1;
+      this.sprite.scale.x = 2 + Math.sin(this.count);
+      this.sprite.scale.y = 2 + Math.sin(this.count);
+      this.lastScaleTime = game.time.now + 150;
+    }
   },
   render () {
     game.debug.text(this.emitter.total, 32, 32);
