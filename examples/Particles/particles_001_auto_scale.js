@@ -22,6 +22,8 @@ PlayGame.prototype = {
   create () {
     game.add.image(0, 0, 'water');
     //
+    this.sprite = game.add.sprite(0, 0, 'bubble');
+    //
     this.emitter = game.add.emitter(game.world.centerX, 400, 400);
     this.emitter.makeParticles('bubble');
     //
@@ -34,9 +36,16 @@ PlayGame.prototype = {
     this.emitter.gravity = -200;
     //
     this.emitter.start(false, 5000, 10);
-    this.emitter.emitX = 0;
+    this.emitter.emitX = game.world.randomX;
+    this.emitter.emitY = game.world.randomY;
     //
-    game.add.tween(this.emitter).to({emitX: 800}, 2000, Phaser.Easing.Linear.None, true, 0, Number.MAX_VALUE, false);
+    this.sprite.reset(this.emitter.emitX, this.emitter.emitY);
+    console.info(this.emitter.emitX + ':' + this.emitter.emitY);
+    //
+    game.add.tween(this.emitter).to({
+      emitX: 800,
+      emitY: 400
+    }, 2000, Phaser.Easing.Linear.None, true, 0, Number.MAX_VALUE, true);
   },
   update () {
     this.emitter.customSort(this.scaleSort, this);
