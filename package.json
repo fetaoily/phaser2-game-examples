@@ -9,7 +9,7 @@
   "author": "fangertao <fetaoily@foxmail.com>",
   "license": "MIT",
   "dependencies": {
-    "phaser-ce": "2.10.0",
-    "serve": "6.4.9"
+    "phaser-ce": "2.10.1",
+    "serve": "6.4.11"
   }
 }
