@@ -18,9 +18,13 @@ PlayGame.prototype = {
   create () {
     this.p1 = new Phaser.Point(300, 300);
     this.p2 = new Phaser.Point(400, 300);
+    //
+    this.line = new Phaser.Line(this.p1.x, this.p1.y, this.p2.x, this.p2.y);
   },
   update () {
     this.p1.rotate(this.p2.x, this.p2.y, 1, true);
+    //
+    this.line.fromSprite(this.p1, this.p2);
   },
   render () {
     game.context.fillStyle = 'rgb(255,255,0)';
@@ -28,5 +32,7 @@ PlayGame.prototype = {
     //
     game.context.fillStyle = 'rgb(255,0,0)';
     game.context.fillRect(this.p2.x, this.p2.y, 4, 4);
+    //
+    game.debug.geom(this.line);
   }
 };
