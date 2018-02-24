@@ -49,6 +49,7 @@ PlayGame.prototype = {
     this.line2 = new Phaser.Line(this.handle3.x, this.handle3.y, this.handle4.x, this.handle4.y);
   },
   update () {
+    //
     this.line1.fromSprite(this.handle1, this.handle2, false);
     this.line2.fromSprite(this.handle3, this.handle4, false);
     //
