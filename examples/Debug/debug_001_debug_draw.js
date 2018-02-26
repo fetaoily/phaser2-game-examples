@@ -1,3 +1,5 @@
+'use strict';
+
 let game;
 let rect = new Phaser.Rectangle(100, 100, 100, 100);
 let circle = new Phaser.Circle(280, 150, 100);
