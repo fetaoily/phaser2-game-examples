@@ -37,7 +37,7 @@ PlayGame.prototype = {
   },
   render () {
     game.debug.inputInfo(32, 32);
-    game.debug.spriteInputInfo(this.sprite, 32, 130);
+    game.debug.spriteInputInfo(this.sprite, 32, 32 * 4);
     game.debug.pointer(game.input.activePointer);
   }
 };
