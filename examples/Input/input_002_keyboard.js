@@ -69,7 +69,6 @@ PlayGame.prototype = {
   },
   render () {
     game.debug.text('Hold left/right to move the ufo.');
-    game.debug.body(this.ufo);
     game.debug.spriteInfo(this.ufo, 32, 32);
     game.debug.spriteBounds(this.ufo);
   }
