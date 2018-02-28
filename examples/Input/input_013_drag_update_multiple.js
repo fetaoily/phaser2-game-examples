@@ -42,13 +42,18 @@
       this.copySprite.alpha = 0.5;
     },
     update () {
+      this.angle += 0.01;
+      //
+      this.copySprite.x = this.dragSprite.x + 220 * Math.cos(this.angle);
+      this.copySprite.y = this.dragSprite.y + 220 * Math.sin(this.angle);
+      this.copySprite.rotation = game.physics.arcade.angleToXY(this.copySprite, this.dragSprite.x, this.dragSprite.y);
     },
     render () {
     },
     dragStart () {
       this.copySprite.alpha = 1;
     },
-    dragUpdate () {
+    dragUpdate (sprite, pointer, dragX, dragY, snapPoint) {
       this.angle += 0.01;
       //
       this.copySprite.x = this.dragSprite.x + 220 * Math.cos(this.angle);
