@@ -46,6 +46,8 @@
     update () {
     },
     render () {
+      game.debug.spriteInfo(this.dragSprite, this.dragSprite.x + 50, this.dragSprite.y);
+      game.debug.spriteInfo(this.copySprite, this.copySprite.x + 50, this.copySprite.y);
     },
     dragStart () {
       this.copySprite.alpha = 1;
