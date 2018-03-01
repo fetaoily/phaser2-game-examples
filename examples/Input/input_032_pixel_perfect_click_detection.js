@@ -22,7 +22,7 @@
       this.bunny = game.add.sprite(game.world.centerX, game.world.centerY, 'bunny');
       this.bunny.anchor.set(0.5);
       this.bunny.inputEnabled = true;
-      // this.bunny.input.pixelPerfectOver = true;
+      this.bunny.input.pixelPerfectOver = true;
       this.bunny.input.useHandCursor  = true;
     },
     update () {
