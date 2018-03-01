@@ -23,7 +23,7 @@
       this.bunny.anchor.set(0.5);
       this.bunny.inputEnabled = true;
       // this.bunny.input.pixelPerfectOver = true;
-      this.bunny.input.userHandCursor = true;
+      this.bunny.input.useHandCursor  = true;
     },
     update () {
       this.bunny.angle += 0.05;
