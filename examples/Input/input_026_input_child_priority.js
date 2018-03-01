@@ -34,18 +34,20 @@
       let pw = (this.popup.width / 2) - 30;
       let ph = (this.popup.height / 2) - 8;
       //
-      let closeButton = game.make.sprite(pw, -ph, 'close');
-      closeButton.inputEnabled = true;
-      closeButton.input.priorityID = 1;
-      closeButton.events.onInputDown.add(this.closeWindow, this);
+      this.closeButton = game.make.sprite(pw, -ph, 'close');
+      this.closeButton.inputEnabled = true;
+      this.closeButton.input.priorityID = 1;
+      this.closeButton.events.onInputDown.add(this.closeWindow, this);
       //
-      this.popup.addChild(closeButton);
+      this.popup.addChild(this.closeButton);
       //
       this.popup.scale.set(0);
       //
       game.input.onDown.add(this.openWindow, this);
     },
     update () {
+      game.debug.spriteInfo(this.popup, 32, 32 * 2);
+      game.debug.spriteInfo(this.closeButton, 32, 32 * 5);
     },
     render () {
       game.debug.text('Click to open window + drag + close', 32, 32);
