@@ -315,6 +315,10 @@ fs-extra@5.0.0:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
+game-controller@^0.0.1:
+  version "0.0.1"
+  resolved "http://registry.npm.taobao.org/game-controller/download/game-controller-0.0.1.tgz#a70ba60b0fb19d71a2a9c99401a21bd136f43ea1"
+
 get-stream@^3.0.0:
   version "3.0.0"
   resolved "http://registry.npm.taobao.org/get-stream/download/get-stream-3.0.0.tgz#8e943d1358dc37555054ecbe2edb05aa174ede14"
@@ -440,6 +444,10 @@ is-wsl@^1.1.0:
 isexe@^2.0.0:
   version "2.0.0"
   resolved "http://registry.npm.taobao.org/isexe/download/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
+
+jquery@^3.3.1:
+  version "3.3.1"
+  resolved "http://registry.npm.taobao.org/jquery/download/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
 
 jsonfile@^4.0.0:
   version "4.0.0"
