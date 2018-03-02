@@ -23,6 +23,7 @@
       this.bar = game.add.graphics();
       this.bar.beginFill(0x000000, 0.2);
       this.bar.drawRect(0, 100, 800, 100);
+      this.bar.endFill();
       //
       let style = {font: 'bold 32px Arial', fill: '#ffffff', boundsAlignH: 'center', boundsAlignV: 'middle'};
       this.text = game.add.text(0, 0, 'Phaser 2.4 text bounds', style);
