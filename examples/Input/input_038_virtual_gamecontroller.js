@@ -2,7 +2,7 @@
   let game;
 
   window.onload = () => {
-    game = new Phaser.Game(800, 600, Phaser.AUTO);
+    window.game = game = new Phaser.Game(800, 600, Phaser.AUTO);
     game.state.add('PlayGame', PlayGame);
     game.state.start('PlayGame');
   };
@@ -181,7 +181,7 @@
         this.player.body.setCircle(22);
       }
       //
-      if (game.input.currentPointers ===0&&!game.input.actionPointer.isMouse){
+      if (game.input.currentPointers === 0 && !game.input.activePointer.isMouse) {
         this.fire = false;
         this.right = false;
         this.left = false;
