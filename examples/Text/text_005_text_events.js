@@ -51,11 +51,13 @@
       this.clicks++;
       item.text = 'clicked ' + this.clicks + ' items';
       item.scale.set(1.5, 1.5);
+      item.angle = 360 * Math.sin(Math.random());
     },
     up (item) {
       item.fill = '#0000ff';
       item.text = 'thanks for clicking!';
       item.scale.set(1);
+      item.angle = 0;
     }
   };
 })();
