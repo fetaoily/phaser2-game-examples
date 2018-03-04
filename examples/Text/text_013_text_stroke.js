@@ -38,7 +38,7 @@
       this.text.fontSize = 50;
       this.text.fontWeight = 'bold';
       //
-      this.stroke = '#000000';
+      this.text.stroke = '#000000';
       this.text.strokeThickness = 30;
       this.text.fill = '#43d637';
     }
