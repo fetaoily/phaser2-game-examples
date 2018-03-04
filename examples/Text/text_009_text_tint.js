@@ -1,11 +1,18 @@
 (() => {
+
   let game;
 
   window.onload = () => {
-    game = new Phaser.Game(800, 600, Phaser.AUTO);
-    game.state.add('PlayGame', PlayGame);
-    game.state.start('PlayGame');
+    game = new NewGame();
   };
+
+  class NewGame extends Phaser.Game {
+    constructor () {
+      super(800, 600, Phaser.AUTO);
+      this.state.add('PlayGame', PlayGame);
+      this.state.start('PlayGame');
+    }
+  }
 
   class PlayGame extends Phaser.State {
     constructor () {
