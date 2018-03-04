@@ -22,6 +22,7 @@
       game.stage.backgroundColor = 0x5d5d5d;
       //
       this.sprite = game.add.sprite(200, 200, 'pic');
+      this.sprite.anchor.set(0.5);
       this.sprite.inputEnabled = true;
       this.sprite.input.enableDrag();
       //
@@ -37,8 +38,10 @@
 
     },
     update () {
-      this.text.x = Math.floor(this.sprite.x + this.sprite.width / 2);
-      this.text.y = Math.floor(this.sprite.y + this.sprite.height / 2);
+      // this.text.x = Math.floor(this.sprite.x + this.sprite.width / 2);
+      // this.text.y = Math.floor(this.sprite.y + this.sprite.height / 2);
+      this.text.x = this.sprite.x;
+      this.text.y = this.sprite.y;
     },
     render () {
     }
