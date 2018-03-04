@@ -9,8 +9,9 @@
   "author": "fangertao <fetaoily@foxmail.com>",
   "license": "MIT",
   "dependencies": {
-    "game-controller": "^0.0.1",
-    "jquery": "^3.3.1",
+    "babel-es6-polyfill": "1.1.0",
+    "game-controller": "0.0.1",
+    "jquery": "3.3.1",
     "phaser-ce": "2.10.1",
     "serve": "6.4.11"
   }
