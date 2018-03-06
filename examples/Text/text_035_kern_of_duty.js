@@ -55,12 +55,15 @@
     }
 
     render () {
+      game.debug.text('index:' + this.index, 32, 32);
+      game.debug.text('line:' + this.line, 32, 32 * 2);
     }
 
     updateLine () {
       if (this.line.length < content[this.index].length) {
         this.line = content[this.index].substr(0, this.line.length + 1);
         this.text.setText(this.line);
+        console.info(this.line);
       } else {
         this.time.events.add(Phaser.Timer.SECOND * 2, this.nextLine, this);
       }
