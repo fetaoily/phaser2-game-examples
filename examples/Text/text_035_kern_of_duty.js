@@ -45,7 +45,7 @@
 
     create () {
       this.add.sprite(0, 0, 'cod');
-      this.text = this.add.text(32, 32, '', {
+      this.text = this.add.text(32, 380, '', {
         font: '30pt Courier', fill: '#19cb65', stroke: '#119f4e', strokeThickness: 2
       });
       this.nextLine();
