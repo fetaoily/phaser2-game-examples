@@ -19,7 +19,7 @@
       this.back = null;
       this.mummy = null;
       this.anim = null;
-      this.loopText;
+      this.loopText = null;
     }
 
     preload () {
