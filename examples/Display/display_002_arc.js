@@ -26,8 +26,9 @@
 
     create () {
       this.graphics = this.add.graphics(this.world.centerX, this.world.centerY);
-      this.graphics.lineStyle(0, 0xffd900);
+      this.graphics.lineStyle(8, 0xffd900);
       this.graphics.arc(0, 0, 135, 0, 1.5707963267948966, false);
+      //
       this.graphics.lineStyle(0);
       this.graphics.beginFill(0xff3300);
       this.graphics.arc(-100, -100, 135, this.math.degToRad(0), this.math.degToRad(90), true);
