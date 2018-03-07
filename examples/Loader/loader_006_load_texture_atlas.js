@@ -31,7 +31,8 @@
 
     create () {
       this.add.sprite(0, 0, 'undersea');
-      this.sprite = this.add.sprite(0, 0, 'test');
+      this.sprite = this.add.sprite(this.world.centerX, this.world.centerY, 'test', 'contra1');
+      this.sprite.anchor.set(0.5);
       this.add.sprite(0, 466, 'coral');
       //
       this.sprite.inputEnabled = true;
