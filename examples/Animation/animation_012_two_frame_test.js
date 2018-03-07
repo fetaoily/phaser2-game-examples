@@ -72,6 +72,7 @@
 
     render () {
       this.game.debug.text(this.player.frame, 32, 32);
+      this.game.debug.body(this.player);
     }
   }
 })();
