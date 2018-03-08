@@ -41,7 +41,8 @@
       this.scale.fullScreenScaleMode = Phaser.ScaleManager.SHOW_ALL;
       //
       this.button = this.add.button(this.world.centerX - 95, 500, 'button', this.actionOnClick, this, 2, 1, 0);
-      this.button.visible = false;
+      // this.button.visible = false;
+      this.button.visible = true;
       // this.scale.enterFullScreen.add(this.onEnterFullScreen, this);
       // this.scale.leaveFullScreen.add(this.onLeaveFullScreen, this);
       this.input.onDown.add(this.goFull, this);
