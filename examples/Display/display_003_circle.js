@@ -28,6 +28,8 @@
       this.graphics = this.add.graphics(0, 0);
       this.graphics.beginFill(0xff0000, 1);
       this.graphics.drawCircle(300, 300, 100);
+      this.graphics.inputEnabled = true;
+      this.graphics.input.enableDrag();
     }
 
     update () {
