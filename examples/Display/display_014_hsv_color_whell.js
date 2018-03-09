@@ -74,7 +74,7 @@
 
     paint4 (pointer, x, y) {
       if (pointer.isDown) {
-        this.bmd.circle(x - 64, y, 8, this.colors[this.i].rbga);
+        this.bmd.circle(x - 64, y, 8, this.colors[this.i].rgb);
       }
     }
 
