@@ -30,6 +30,7 @@
 
     create () {
       this.ball = this.make.sprite(0, 0, "ball");
+      this.ball.anchor.setTo(0.5, 0.5);
       this.texture = this.add.renderTexture(this.game.width, this.game.height);
       this.add.sprite(0, 0, this.texture);
     }
