@@ -1,4 +1,5 @@
 (() => {
+  'use strict';
   let game;
 
   window.onload = () => {
