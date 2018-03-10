@@ -45,6 +45,13 @@
       );
       this.boss.anchor.setTo(0.5, 0.5);
       this.boss.texture.baseTexture.scaleMode = PIXI.scaleModes.NEAREST;
+      this.boss.smoothed = false;
+      //
+      this.stage.smoothed = false;
+      //
+      this.melon = this.add.sprite(500, this.world.centerY, "melon");
+      this.melon.anchor.setTo(0.5, 0.5);
+      //
       this.button = this.add.button(
         32,
         32,
@@ -64,6 +71,9 @@
     clickedIt() {
       this.boss.scale.x += 0.5;
       this.boss.scale.y += 0.5;
+      //
+      this.melon.scale.x += 1;
+      this.melon.scale.y += 1;
     }
   }
 })();
