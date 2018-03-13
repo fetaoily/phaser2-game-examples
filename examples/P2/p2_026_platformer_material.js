@@ -74,7 +74,7 @@
           true
       );
       //
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < 10; i++) {
         let box = this.add.sprite(300, 645 - 95 * i, "atari");
         this.physics.p2.enable(box);
         box.body.mass = 6;
