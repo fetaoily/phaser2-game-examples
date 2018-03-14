@@ -1,2 +1,9 @@
 {
+    "editor.minimap.maxColumn": 0,
+    "html.format.wrapLineLength": 0,
+    "editor.tabSize": 2,
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+    "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+    "javascript.format.insertSpaceAfterConstructor": true,
+    "team.showWelcomeMessage": false
 }
