@@ -5,5 +5,6 @@
     "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
     "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
     "javascript.format.insertSpaceAfterConstructor": true,
-    "team.showWelcomeMessage": false
+    "team.showWelcomeMessage": false,
+    "prettier.singleQuote": true
 }
