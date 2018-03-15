@@ -537,6 +537,10 @@ jquery@3.3.1:
   version "3.3.1"
   resolved "http://registry.npm.taobao.org/jquery/download/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
 
+jshit@0.0.1:
+  version "0.0.1"
+  resolved "http://registry.npm.taobao.org/jshit/download/jshit-0.0.1.tgz#3ae8576a2e21483a7eba06fa9f8e887850bdf46b"
+
 jsonfile@^4.0.0:
   version "4.0.0"
   resolved "http://registry.npm.taobao.org/jsonfile/download/jsonfile-4.0.0.tgz#8771aae0799b64076b76640fca058f9c10e33ecb"
