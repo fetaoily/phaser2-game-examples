@@ -8,7 +8,7 @@
   };
 
   class NewGame extends Phaser.Game {
-    constructor() {
+    constructor () {
       super(800, 600, Phaser.AUTO);
       this.state.add('PlayGame', PlayGame);
       this.state.start('PlayGame');
@@ -16,27 +16,27 @@
   }
 
   class PlayGame extends Phaser.State {
-    constructor() {
+    constructor () {
       super();
       this.fx = null;
     }
 
-    preload() {
+    preload () {
       this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
       this.scale.pageAlignHorizontally = true;
       this.scale.pageAlignVertically = true;
       //
       this.game.load.image('bg', '/assets/pics/cougar_dragonsun.png');
       this.game.load.spritesheet(
-        'button',
-        '/assets/buttons/flixel-button.png',
-        80,
-        20
+          'button',
+          '/assets/buttons/flixel-button.png',
+          80,
+          20
       );
       this.game.load.bitmapFont(
-        'nokia',
-        '/assets/fonts/bitmapFonts/nokia16black.png',
-        '/assets/fonts/bitmapFonts/nokia16black.xml'
+          'nokia',
+          '/assets/fonts/bitmapFonts/nokia16black.png',
+          '/assets/fonts/bitmapFonts/nokia16black.xml'
       );
       this.game.load.audio('sfx', [
         '/assets/audio/SoundEffects/magical_horror_audiosprite.mp3',
@@ -44,7 +44,7 @@
       ]);
     }
 
-    create() {
+    create () {
       this.bg = this.game.add.image(0, 0, 'bg');
       this.bg.width = 800;
       this.bg.height = 600;
@@ -66,20 +66,22 @@
       this.makeButton('pause', 600, 380);
     }
 
-    update() {}
+    update () {
+    }
 
-    render() {}
+    render () {
+    }
 
-    makeButton(name, x, y) {
+    makeButton (name, x, y) {
       let button = this.game.add.button(
-        x,
-        y,
-        'button',
-        this.click,
-        this,
-        0,
-        1,
-        2
+          x,
+          y,
+          'button',
+          this.click,
+          this,
+          0,
+          1,
+          2
       );
       button.name = name;
       button.scale.set(2, 1.5);
@@ -89,7 +91,7 @@
       text.x += button.width / 2 - text.textWidth / 2;
     }
 
-    click(button) {
+    click (button) {
       if (button.name === 'pause') {
         if (this.fx.paused) {
           this.fx.resume();
