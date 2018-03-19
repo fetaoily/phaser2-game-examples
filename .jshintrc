@@ -69,6 +69,7 @@
   "wsh": false,
   "yui": false,
   "globals": {
-    "Phaser": true
+    "Phaser": true,
+    "Protracker": true
   }
 }
