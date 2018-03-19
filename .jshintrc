@@ -70,6 +70,7 @@
   "yui": false,
   "globals": {
     "Phaser": true,
-    "Protracker": true
+    "Protracker": true,
+    "YM": true
   }
 }
