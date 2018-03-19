@@ -13,7 +13,7 @@
     "game-controller": "0.0.1",
     "jquery": "3.3.1",
     "jshit": "0.0.1",
-    "phaser-ce": "2.10.1",
-    "serve": "6.4.11"
+    "phaser-ce": "2.10.2",
+    "serve": "6.5.3"
   }
 }
