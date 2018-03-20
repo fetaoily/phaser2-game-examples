@@ -71,6 +71,8 @@
   "globals": {
     "Phaser": true,
     "Protracker": true,
-    "YM": true
+    "YM": true,
+    "ErtaoGame": true,
+    "ErtaoGameState": true
   }
 }
