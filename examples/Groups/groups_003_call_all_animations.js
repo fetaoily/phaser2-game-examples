@@ -28,10 +28,25 @@
     }
 
     create () {
+      //
+      this.physics.startSystem(Phaser.Physics.ARCADE);
+      //
       this.coins = this.add.group();
       //
       for (let i = 0; i < 50; i++) {
-        this.coins.create(this.world.randomX, this.world.randomY, 'coin', 0);
+        let coin = this.coins.create(
+            this.world.randomX,
+            this.world.randomY,
+            'coin',
+            0
+        );
+        //
+        coin.inputEnabled = true;
+        coin.input.enableDrag();
+        //
+        this.physics.arcade.enable(coin);
+        coin.body.velocity.x = this.math.between(-300, 300);
+        coin.body.collideWorldBounds = true;
       }
       //
       this.coins.callAll(
@@ -46,6 +61,7 @@
     }
 
     update () {
+      this.physics.arcade.collide(this.coins);
     }
 
     render () {
