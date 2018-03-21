@@ -52,7 +52,7 @@
     update() {}
 
     render() {
-      this.game.debug.text('Group size: ' + this.items.total, 74, 500);
+      this.game.debug.text('Group size: ' + this.items.total, 74, 580);
       this.game.debug.text('Drop there to remove item from the Group', 394, 24);
     }
 
