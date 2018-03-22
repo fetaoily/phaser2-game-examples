@@ -24,6 +24,9 @@
 
     preload() {
       super.preload();
+      //
+      this.scale.scaleMode = Phaser.ScaleManager.USER_SCALE; // very important
+      //
       this.load.image('wheel', 'assets/pics/color_wheel_swirl.png');
     }
 
@@ -45,7 +48,6 @@
 
     updateTooltip(pointer, x, y) {
       if (x >= 0 && x <= this.bmd.width && y >= 0 && y <= this.bmd.height) {
-        
         let color = this.bmd.getPixelRGB(x, y);
 
         this.tooltip.fill(0, 0, 0);
